@@ -1,0 +1,68 @@
+1. GIT
+- Xem lịch sử commit: Git log
+
+- Thay đổi commit message, có 2 cách
+    + Sử dụng lệnh:
+     git commit --amend -m "message" (message: message cần thay đổi)
+    + Sử dụng dòng lệnh:
+     git commit --amend 
+        gõ i-> vào chế độ insert
+	    gỡ esc thoát insert
+	    gõ wq -> write and quit
+
+- Chuyển file từ vùng staging area -> working directory (restore file)
+    + Sử dụng lệnh:
+     git restore --staged <tenfile> -> chuyển 1 file nhất định
+     git restore --staged . -> chuyển tất cả các file
+
+- Chuyển file từ vùng responsitory về working directory (uncommit)
+    + Sử dụng lệnh: 
+     git reset HEAD~1 (1:là 1 lần uncommit, có thể edit số lượng uncommit)
+
+- Branch (nhánh): Dùng branch để tạo ra 1 vùng làm việc mới, không ảnh hưởng đến vùng làm việc đã ổn định
+    + Tạo branch 
+     git branch <ten_branch> 
+    + Chuyển branch
+     git checkout <ten_branch>
+    + Tạo branch và chuyển nhánh sang branch đã tạo 
+     git checkout -b <ten_branch>
+     
+Tips: Luôn tạo nhánh mới trước khi thực hiện 1 lệnh copy từ internet
+- Tạo file .gitignore (chỉ định những file/folder không muốn Git theo dõi hoặc đưa vào trong quá trình commit)
+    Ex: password.txt, user.txt -> bỏ các file không muốn đưa lên git vào file .gitignore 
+        Nên dẫn đúng url nếu file nằm trong folder, ex: folder1/password.txt
+        Đối với folder, khi input folder1/ -> bỏ tất cả các file trong folder1 không đưa lên git
+
+2. JAVASCRIPT BASIC
+- Conventory(quy tắc): Giúp code theo 1 format dễ nhìn, member trong team dễ đọc code
+    + Các kiểu quy tắc đặt tên: 
+     snake_case: chưa dùng
+     kebad-case: tên file
+     camelCase: tên biến
+     PascalCase: tên class
+- Consolelo.log formated
+    + console.log with " : in nội dung log ra nhưng khi kết hợp với biến cần thêm dấu +
+        Ex: let size = "Bigsize"
+         console.log("Muốn uống trà sữa" + size) 
+    + console.log with ‘ : in nội dung log ra kết hợp với biến
+        Ex: let size = "Bigsize"
+         console.log(‘Muốn uống trà sữa"  ${size}‘) 
+         -> Recommend sử dụng cách này
+- Object: đối tượng, dùng để tập hợp các giá trị vào cùng 1 biến hoặc hằng số
+    + Ex:
+        let user ={
+            "name": "Minh Nhi",
+            "firstName": "Minh,
+            "lastName":"Nhi"
+            "country":{
+                "country_name":"VN",
+                "postcode": 12345
+            }
+        }
+    + Khai báo:
+        Ex: console.log("country = " + country.country_name) hoặc
+            console.log("country = " + country["country_name"])
+- Logical operator: Toán tử logic
+    + && : cả 2 mệnh đề đều đúng
+    + || : 1 trong 2 vế đúng
+    + !: đảo ngược giá trị
