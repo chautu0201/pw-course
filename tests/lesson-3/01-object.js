@@ -30,24 +30,21 @@ console.log(`Điểm môn toán: ${student["grades"]["math"]}`);
 //4. in tên và giá sản phẩm
 let product = {
     product1: {
-        "name": "1 trái xoài",
-        "price": 10
-    },
-    product2: {
-        "name": "1 trái ổi",
-        "price": 20
+        "Xoai": 10,
+        "Le": 20,
+        "Luu": 30,
+        "Oi": 40
     }
 };
 for (let property in product) {
-    console.log(`Thông tin sản phẩm ${product[property].name}`);
-    console.log(`Giá sản phẩm ${product[property].price}`);
+    console.log(`Ten: ${property}, gia: ${product[property]}`);
 }
 
 //5. Thay đổi giá trị , in ra object mới
 
 let setting = {
-    "volume": 10,
-    "brightness": "tuyệt vời"
+    "volume": "max",
+    "brightness": 10
 };
 setting.volume = 20;
 console.log(
@@ -58,19 +55,19 @@ console.log(
 let bike = {
     "name": "1 chiếc xe xinh đẹp",
     "age": 2
-}
-bike.color ="Blue"
-console.log(`Giá trị được thêm vào trong object là ${bike.color}`)
+};
+bike.color = "Blue";
+console.log(`Giá trị được thêm vào trong object là ${bike.color}`);
 
 //7. Tạo object và xóa thuộc tính khỏi object
 let employee = {
     "name": "Văn A",
     "age": 20
-}
+};
 delete employee.age;
-console.log(employee)
+console.log(employee);
 
-//8. 
+//8.
 const school = {
     classA: ["An", "Bình", "Châu"],
     classB: ["Đào", "Hương", "Giang"]

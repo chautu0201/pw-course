@@ -17,7 +17,7 @@
 
 - Chuyển file từ vùng responsitory về working directory (uncommit)
     + Sử dụng lệnh: 
-     git reset HEAD~1 (1:là 1 lần uncommit, có thể edit số lượng uncommit)
+     git reset HEAD~1 
 
 - Branch (nhánh): Dùng branch để tạo ra 1 vùng làm việc mới, không ảnh hưởng đến vùng làm việc đã ổn định
     + Tạo branch 
