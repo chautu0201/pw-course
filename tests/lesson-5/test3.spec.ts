@@ -10,7 +10,6 @@ test("BT3", async ({ page }) => {
         for (let i = 0; i <= 100; i++) {
             await page.locator("input#new-task").fill(`Todo ${i}`);
             await page.locator("button#add-task").click();
-            //await page.waitForSelector(`//ul[@id="task-list"]/li/span[contains(text(), "Todo ${i}")]`);
         }
     });
     await test.step("Delete todo with odd number", async () => {
